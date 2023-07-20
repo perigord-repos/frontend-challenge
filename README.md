@@ -1,11 +1,14 @@
 # Frontend react test
-## Introduction:
+
+ **Introduction:**
 We want you to implement a web page, regarding the specs and wireframes provided on the "specs" folder, with a tic-tac-toe game. 
 Feel free to add the tools you might need to the project, such as bundlers and npm dependencies, or just bootstrap the application with create-react-app. 
 
+The layout should be responsive and the game should be playable both in desktop and mobile. Feel free to create your own color scheme and design.
+
 The only mandatory tech requirement is the usage of React >= 17.
 
-This repo should be cloned and your final work should be submitted to our repository as a pull request.
+This repo should be cloned and your final work should be submitted as a pull request.
 
  **Tic-tac-toe game main requirements:**
 - Game board/ grid;
@@ -13,7 +16,7 @@ This repo should be cloned and your final work should be submitted to our reposi
 - Page shows congratulations when players win;
 ___
  **Game rules/ interactions:**
-- Rules (first player to reach 5 victories wins);
+- First player to reach 5 victories wins;
 - Detect victories;
 - Highlight victory line and tokens;
 - Count players wins;
