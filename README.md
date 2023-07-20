@@ -19,14 +19,14 @@ ___
 - First player to reach 5 victories wins;
 - Detect victories;
 - Highlight victory line and tokens;
-- Count players wins;
-- Time counter per game;
 ___
  **Game outputs:**
+- Count players wins;
+- Count time per game;
 - Game final stats;
 - Percentage of wins for each player;
 - History of game winners;
-- Aggregated play time;
+- Total play time;
 ___
 ## Bonus features
 #### **Option 1:**
