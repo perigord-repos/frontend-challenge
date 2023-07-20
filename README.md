@@ -12,7 +12,7 @@ This repo should be cloned and your final work should be submitted to our reposi
 - Player wins counter;
 - Number of played games counter;
 - Page shows congratulations when players win;
-
+___
  **Game rules/ interactions:**
 - Rules (first player to reach 5 victories wins);
 - Detect victories;
