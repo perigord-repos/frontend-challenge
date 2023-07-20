@@ -1,7 +1,7 @@
 # Frontend react test
 
 ## **Introduction**
-We want you to implement a web page, regarding the specs and wireframes provided on the "specs" folder, with a tic-tac-toe game. 
+We want you to implement a web page, regarding the wireframes provided on the "specs" folder, with a tic-tac-toe game. 
 Feel free to add the tools you might need to the project, such as bundlers and npm dependencies, or just bootstrap the application with create-react-app. 
 
 The layout should be responsive and the game should be playable both in desktop and mobile. Feel free to create your own color scheme and design.
