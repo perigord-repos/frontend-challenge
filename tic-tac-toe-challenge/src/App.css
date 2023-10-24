@@ -1,0 +1,182 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 5px;
+  display: inline-grid;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.square img {
+  max-width: 80%;
+  max-height: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.square:hover {
+  background-color: #f2f2f2;
+}
+
+.square.X,
+.square.O {
+  cursor: default;
+  color: #333;
+}
+
+.game-info {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.game-info h2,
+.game-info h3 {
+  margin: 10px 0;
+}
+
+.winning-square {
+  background-color: #ffdd57;
+  border-color: #ffbb00;
+  color: #fff;
+}
+
+.game-container {
+  text-align: center;
+}
+
+header {
+  margin: 20px 0;
+}
+
+.players-board-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.player {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.game-board {
+  flex: 2;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.timer-container {
+  margin-top: 20px;
+}
+
+.stats-and-right-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+
+.player-stats {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 20px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.percentage-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.label {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.stats-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.percentage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.right-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.circles-container,
+.squares-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 20px 0;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: #e0e0e0;
+}
+
+.circle.filled {
+  background-color: #333;
+}
+
+.squares-container {
+  display: flex;
+  gap: 10px;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.square.P1 {
+  background-color: #eee;
+}
+
+.square.P2 {
+  background-color: #ddd;
+}
