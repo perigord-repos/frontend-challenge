@@ -8,7 +8,7 @@ The layout should be responsive but you'll only need to guarantee the game's cor
 
 The only mandatory tech requirement is the usage of React >= 17.
 
-Fork this repository, do your code and share it with us.
+To submit your response, fork this repository and share it with us.
 
  **Game main requirements:**
 - Game board/ grid;
