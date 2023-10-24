@@ -1,22 +1,22 @@
-import React from 'react';
-import { useGame } from './GameContext';
-import { formatTime } from './utils'
+// import React from 'react';
+// import { useGame } from './GameContext';
+// import { formatTime } from './utils'
 
-const GameInfo: React.FC = () => {
-  const { currentPlayer, winner, xWins, oWins, totalPlayTime, incrementXWins, incrementOWins } = useGame();
+// const GameInfo: React.FC = () => {
+//   const { currentPlayer, winner, xWins, oWins, totalPlayTime, incrementXWins, incrementOWins } = useGame();
 
-  // if (winner === "Player 1") {
-  //   incrementXWins();
-  // } else if (winner === "Player 2") {
-  //   incrementOWins();
-  // }
+//   // if (winner === "Player 1") {
+//   //   incrementXWins();
+//   // } else if (winner === "Player 2") {
+//   //   incrementOWins();
+//   // }
 
-  return (
-    <div className="game-info">
-      {winner && <h2>{winner} wins!</h2>}
+//   return (
+//     <div className="game-info">
+//       {winner && <h2>{winner} wins!</h2>}
 
-    </div>
-  );
-};
+//     </div>
+//   );
+// };
 
-export default GameInfo;
+// export default GameInfo;

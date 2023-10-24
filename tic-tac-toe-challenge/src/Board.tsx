@@ -60,9 +60,6 @@ const Board: React.FC = () => {
       setHasStarted(true);
     }
 
-
-
-
     const newBoard = board.slice();
     newBoard[index] = currentPlayer;
     const [newWinner, winningCombo] = checkWinner(newBoard);

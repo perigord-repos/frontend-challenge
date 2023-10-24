@@ -11,6 +11,7 @@ interface SquareProps {
 const Square: React.FC<SquareProps> = ({ value, onClick, isWinningSquare }) => {
   return (
     <button 
+      data-testid="square"
       className={`square ${isWinningSquare ? 'winning-square' : ''}`} 
       onClick={onClick}
     >
