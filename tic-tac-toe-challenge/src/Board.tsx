@@ -53,6 +53,8 @@ const Board: React.FC = () => {
   }, [timeLeft, hasStarted, winner, allGamesFinished]);
 
 
+
+
   const handleSquareClick = (index: number) => {
     if (board[index] || winner) return;
 
@@ -76,7 +78,7 @@ const Board: React.FC = () => {
           const newXWins = prevXWins + 1;
           if (newXWins === 5) {
             setUltimateWinner('X');
-            setAllGamesFinished(true);  // Stop the total play time
+            setAllGamesFinished(true);  
           }
           return newXWins;
         });
@@ -92,12 +94,6 @@ const Board: React.FC = () => {
       }
       setIsGameOver(true);
     }
-
-    // const checkForDraw = (board: any[]) => board.every(cell => cell !== null);
-    // if (checkForDraw(newBoard) && !newWinner && !isDraw) {
-    //   setIsDraw(true);
-    // }
-
   };
 
   return (
