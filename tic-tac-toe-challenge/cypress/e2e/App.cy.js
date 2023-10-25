@@ -12,9 +12,9 @@ describe('Tic Tac Toe App', () => {
     });
   
     it('renders the game board', () => {
-      // Assuming 2 Board components render 
+      // Assuming 1 Board components render 
       cy.get('.game-board').should('be.visible');
-      cy.get('.game-board .board').should('have.length', 2);
+      cy.get('.game-board .board').should('have.length', 1);
     });
   
     it('renders player stats', () => {

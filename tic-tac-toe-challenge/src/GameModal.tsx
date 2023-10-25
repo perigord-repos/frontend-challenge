@@ -2,7 +2,7 @@ import React from 'react';
 import { useGame } from './GameContext';
 import { Modal, Button } from 'react-bootstrap';
 
-const GameOverModal: React.FC = () => {
+const GameModal: React.FC = () => {
   const { winner, resetGame, ultimateWinner, timeLeft } = useGame();
 
   if (!winner && timeLeft > 0) return null;
@@ -54,4 +54,4 @@ const GameOverModal: React.FC = () => {
   );
 };
 
-export default GameOverModal;
+export default GameModal;

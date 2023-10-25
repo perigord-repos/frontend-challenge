@@ -1,6 +1,6 @@
 /* global cy */
 
-describe('GameOverModal', () => {
+describe('Modal', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000');  
   });

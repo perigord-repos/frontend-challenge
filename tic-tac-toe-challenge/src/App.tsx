@@ -1,14 +1,14 @@
 import React from 'react';
 import { GameProvider, useGame } from './GameContext';
 import Board from './Board';
-import GameOverModal from './GameOverModal';
+import GameModal from './GameModal';
 import './App.css';
 import Player from './Player';
 import { formatTime } from './utils'
-import Stats from './Stats';
+import StatsLeft from './StatsLeft';
 import StatsRight from './StatsRight';
 
-const GameLayout: React.FC = () => {
+export const GameLayout: React.FC = () => {
   const {
     xWins,
     oWins,
@@ -23,23 +23,12 @@ const GameLayout: React.FC = () => {
         <header className="text-center mb-4">
           <h1>TIC TAC TOE GAME</h1>
         </header>
-        <div className="game-board mb-4 d-block d-md-none">
-          <Board />
-        </div>
-        <div className="row mb-4 d-block d-md-none">
-          <div className="col-12 mb-4">
-            <Player label="PLAYER 1" wins={xWins} />
-          </div>
-          <div className="col-12">
-            <Player label="PLAYER 2" wins={oWins} />
-          </div>
-        </div>
-        <div className="players-board-container d-none d-md-flex">
-          <Player label="PLAYER 1" wins={xWins} />
-          <div className="game-board">
+        <div className="players-board-container d-flex flex-md-row">
+          <Player label="PLAYER 1" wins={xWins} className="order-1"/>
+          <div className="game-board order-0 order-md-1">
             <Board />
           </div>
-          <Player label="PLAYER 2" wins={oWins} />
+          <Player label="PLAYER 2" wins={oWins} className="order-2"/>
         </div>
         <div className='game-timer mb-4'>
           <h2>
@@ -49,7 +38,7 @@ const GameLayout: React.FC = () => {
         </div>
         <div className="row stats-and-right-container">
           <div className='col-md-6 stats-container'>
-            <Stats />
+            <StatsLeft />
           </div>
           <div className="col-md-6 right-content">
             <StatsRight />
@@ -57,7 +46,7 @@ const GameLayout: React.FC = () => {
         </div>
         <h2 className="mt-4">Total Play Time: {formatTime(totalPlayTime)}</h2>
       </div>
-      <GameOverModal />
+      <GameModal />
     </div>
   );
 };

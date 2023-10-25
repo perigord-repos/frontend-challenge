@@ -2,7 +2,7 @@ import React from 'react';
 import { useGame } from './GameContext';
 import { formatTime } from './utils';
 
-function Stats() {
+function StatsLeft() {
   const { xWins, oWins, totalPlayTime } = useGame(); 
 
   const totalGames = xWins + oWins;
@@ -48,4 +48,4 @@ function Stats() {
   );
 }
 
-export default Stats;
+export default StatsLeft;
