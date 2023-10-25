@@ -6,11 +6,22 @@ export interface PlayerProps {
     className?: string;
 }
 
+export interface GamesHistoryProps {
+    totalGames: number;
+    xWins: number;
+    oWins: number;
+}
+
+export interface PlayedGamesProps {
+    totalGames: number;
+    gamesPlayed: number;
+}
+
 export interface PlayerStatsProps {
     playerId: string;
     wins: number;
     losses: number;
-  }
+}
 
 export interface ModalContentProps {
     title: string;
@@ -50,6 +61,11 @@ export interface IGameContext {
     initialState: GameState;
     isDraw: boolean;
     setIsDraw: React.Dispatch<React.SetStateAction<boolean>>;
+    squares: (string | null)[];
+    gridSize: number;
+    setGridSize: React.Dispatch<React.SetStateAction<number>>;
+    setSquares: React.Dispatch<React.SetStateAction<number[]>>;
+
 }
 
 export interface GameState {

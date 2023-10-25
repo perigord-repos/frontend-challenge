@@ -10,6 +10,8 @@ const initialState = {
   isDraw: false,
 };
 
+const initialSquaresValue = Array(81).fill(null);
+
 export const useGame = () => {
   const context = useContext(GameContext);
   if (!context) {
@@ -31,6 +33,8 @@ export const GameProvider: React.FC<IGameProviderProps> = ({ children }) => {
   const [hasStarted, setHasStarted] = useState<boolean>(false);
   const [totalPlayTime, setTotalPlayTime] = useState<number>(0);
   const [allGamesFinished, setAllGamesFinished] = useState<boolean>(false);
+  const [gridSize, setGridSize] = useState(3); 
+  const [squares, setSquares] = useState(initialSquaresValue); // replace with actual type and initial value
 
   function incrementXWins() {
     setXWins(prevXWins => prevXWins + 1);
@@ -62,7 +66,7 @@ export const GameProvider: React.FC<IGameProviderProps> = ({ children }) => {
       winningCombination, setWinningCombination, timeLeft, setTimeLeft,
       hasStarted, setHasStarted, totalPlayTime, setTotalPlayTime,
       allGamesFinished, setAllGamesFinished, incrementXWins, incrementOWins,
-      initialState, isDraw, setIsDraw
+      initialState, isDraw, setIsDraw, gridSize, setGridSize, squares, setSquares
     }}>
       {children}
     </GameContext.Provider>

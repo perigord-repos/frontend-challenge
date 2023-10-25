@@ -7,6 +7,7 @@ import Player from './Player';
 import { formatTime } from './utils'
 import StatsLeft from './StatsLeft';
 import StatsRight from './StatsRight';
+import GridSelector from './GridSelector';
 
 export const GameLayout: React.FC = () => {
   const {
@@ -26,6 +27,8 @@ export const GameLayout: React.FC = () => {
         <div className="players-board-container d-flex flex-md-row">
           <Player label="PLAYER 1" wins={xWins} className="order-1"/>
           <div className="game-board order-0 order-md-1">
+
+            
             <Board />
           </div>
           <Player label="PLAYER 2" wins={oWins} className="order-2"/>
@@ -54,6 +57,7 @@ export const GameLayout: React.FC = () => {
 const App: React.FC = () => {
   return (
     <GameProvider>
+      <GridSelector />
       <GameLayout />
     </GameProvider>
   );

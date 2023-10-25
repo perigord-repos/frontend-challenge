@@ -1,10 +1,12 @@
+/* Board Styles */
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 60px);
+  grid-template-columns: repeat(var(--grid-size), 60px); /* Assuming 60px for each square, adjust as needed */
   gap: 5px;
-  display: inline-grid;
+  justify-content: center;
 }
 
+/* Square Styles */
 .square {
   width: 60px;
   height: 60px;
@@ -17,32 +19,19 @@
   transition: background-color 0.3s;
 }
 
-.square img {
-  max-width: 80%;
-  max-height: 80%;
-  display: block;
-  margin: 0 auto;
-}
-
-
 .square:hover {
   background-color: #f2f2f2;
 }
 
-.square.X,
-.square.O {
+.square img {
+  max-width: 80%;
+  max-height: 80%;
+  margin: 0 auto;
+}
+
+.square.X, .square.O {
   cursor: default;
   color: #333;
-}
-
-.game-info {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.game-info h2,
-.game-info h3 {
-  margin: 10px 0;
 }
 
 .winning-square {
@@ -51,6 +40,17 @@
   color: #fff;
 }
 
+/* Game Info Styles */
+.game-info {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.game-info h2, .game-info h3 {
+  margin: 10px 0;
+}
+
+/* Game Container and Header */
 .game-container {
   text-align: center;
 }
@@ -59,6 +59,7 @@ header {
   margin: 20px 0;
 }
 
+/* Player Board Styles */
 .players-board-container {
   display: flex;
   justify-content: space-between;
@@ -66,23 +67,28 @@ header {
   flex-direction: column;
 }
 
-.player {
-  flex: 1;
+.player, .game-board {
   padding: 20px;
   border: 1px solid #ccc;
+}
+
+.player {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
 .game-board {
   flex: 2;
-  padding: 20px;
-  border: 1px solid #ccc;
 }
 
 .timer-container {
   margin-top: 20px;
 }
 
+/* Stats Styles */
 .stats-and-right-container {
   display: flex;
   justify-content: space-between;
@@ -92,25 +98,14 @@ header {
 
 .player-stats {
   display: flex;
-  justify-content: flex-start;
   margin-right: 20px;
 }
 
-.player {
+.percentage-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.percentage-circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px 0;
+  padding: 5px;
 }
 
 .label {
@@ -124,13 +119,18 @@ header {
   justify-content: space-between;
 }
 
-.percentage-container {
+.percentage-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #eee;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 5px;
+  justify-content: center;
+  margin: 10px 0;
 }
 
+/* Right Container */
 .right-container {
   width: 100%;
   display: flex;
@@ -139,8 +139,7 @@ header {
   gap: 30px;
 }
 
-.circles-container,
-.squares-container {
+.circles-container, .squares-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,18 +160,7 @@ header {
 }
 
 .squares-container {
-  display: flex;
   gap: 10px;
-}
-
-.square {
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
 }
 
 .square.P1 {

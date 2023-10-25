@@ -25,7 +25,8 @@ const Board: React.FC = () => {
     setTotalPlayTime,
     setAllGamesFinished,
     setIsDraw,
-    isDraw
+    isDraw,
+    gridSize
   } = useGame();
 
   useEffect(() => {
@@ -103,14 +104,11 @@ const Board: React.FC = () => {
     }, [board, currentPlayer, hasStarted, winner]); 
 
   return (
-    <div className="board">
-      {board.map((value, index) => (
-        <Square
-          key={index}
-          value={board[index] as 'X' | 'O' | null}
-          onClick={() => handleSquareClick(index)}
-          isWinningSquare={winningCombination?.includes(index) || false}
-        />
+    <div className="board" style={{ "--grid-size": gridSize } as React.CSSProperties}>
+      {[...Array(gridSize * gridSize)].map((_, idx) => (
+          <Square key={idx} index={idx}  value={board[idx] as 'X' | 'O' | null}
+          onClick={() => handleSquareClick(idx)}
+          isWinningSquare={winningCombination?.includes(idx) || false} />
       ))}
     </div>
   );

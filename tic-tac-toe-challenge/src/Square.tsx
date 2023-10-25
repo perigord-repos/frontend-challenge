@@ -11,6 +11,7 @@ interface SquareProps {
   value: 'X' | 'O' | null;
   onClick: () => void;
   isWinningSquare?: boolean; 
+  index: number;
 }
 
 const Square: React.FC<SquareProps> = ({ value, onClick, isWinningSquare }) => {
