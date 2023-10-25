@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import Square from './Square';
 import { useGame } from './GameContext';
-import { checkWinner } from './GameContext';
+import { checkWinner } from './utils';
 
 const Board: React.FC = () => {
   const {
@@ -30,7 +30,6 @@ const Board: React.FC = () => {
 
   useEffect(() => {
     let gameTimer: NodeJS.Timeout;
-    let totalPlayTimer: NodeJS.Timeout;
 
     if (hasStarted && timeLeft > 0 && !winner) {
       gameTimer = setTimeout(() => {
@@ -40,22 +39,29 @@ const Board: React.FC = () => {
       setIsGameOver(true);
     }
 
+    return () => {
+      clearTimeout(gameTimer);
+    };
+  }, [timeLeft, hasStarted, winner]);
+
+  
+  useEffect(() => {
+    let totalPlayTimer: NodeJS.Timeout;
+
     if (hasStarted && !allGamesFinished) {
       totalPlayTimer = setInterval(() => {
         setTotalPlayTime(prevTime => prevTime + 1);
       }, 1000);
     }
 
+    // Clean up totalPlayTimer
     return () => {
-      clearTimeout(gameTimer);
       clearInterval(totalPlayTimer);
     };
-  }, [timeLeft, hasStarted, winner, allGamesFinished]);
+  }, [hasStarted, allGamesFinished]);
 
 
-
-
-  const handleSquareClick = (index: number) => {
+  const handleSquareClick = useCallback((index: number) => {
     if (board[index] || winner) return;
 
     if (!hasStarted) {
@@ -94,7 +100,7 @@ const Board: React.FC = () => {
       }
       setIsGameOver(true);
     }
-  };
+    }, [board, currentPlayer, hasStarted, winner]); 
 
   return (
     <div className="board">

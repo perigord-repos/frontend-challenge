@@ -26,7 +26,6 @@ describe('Square component', () => {
     cy.get('.board').find('[data-testid="square"]').eq(1).click({ force: true });
     cy.get('.board').find('[data-testid="square"]').eq(4).click({ force: true });
     cy.get('.board').find('[data-testid="square"]').eq(2).click({ force: true });
-
     cy.get('.modal-body').should('be.visible').and('contain', 'X wins!');
 })
 })

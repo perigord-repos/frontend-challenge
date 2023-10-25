@@ -18,13 +18,16 @@ describe('Tic Tac Toe App', () => {
     });
   
     it('renders player stats', () => {
-      cy.get('.col-12').eq(0).should('contain', 'PLAYER 1');
-      cy.get('.col-12').eq(1).should('contain', 'PLAYER 2');
-  
+      cy.get('.players-board-container').should('have.length', 1);
+      cy.get('.players-board-container .player').eq(0).should('contain', 'PLAYER 1');
+      cy.get('.players-board-container .player').eq(1).should('contain', 'PLAYER 2');
+      
       // Check wins for each player (requires initial state or stubbing data)
-      cy.get('.col-12').eq(0).should('contain', '0');  // Assuming initial wins is 0
-      cy.get('.col-12').eq(1).should('contain', '0');
+      cy.get('.players-board-container .player-wins').eq(0).should('contain', '0');
+      cy.get('.players-board-container .player-wins').eq(1).should('contain', '0');
+    
     });
+    
   
     it('renders game timer and stats', () => {
       cy.get('.game-timer').should('be.visible');
