@@ -2,6 +2,11 @@ import React from 'react';
 import { ReactComponent as XIcon } from './assets/x.svg';
 import { ReactComponent as OIcon } from './assets/o.svg';
 
+const ICONS = {
+  X: <XIcon />,
+  O: <OIcon />,
+};
+
 interface SquareProps {
   value: 'X' | 'O' | null;
   onClick: () => void;
@@ -15,7 +20,7 @@ const Square: React.FC<SquareProps> = ({ value, onClick, isWinningSquare }) => {
       className={`square ${isWinningSquare ? 'winning-square' : ''}`} 
       onClick={onClick}
     >
-      {value === 'X' ? <XIcon /> : value === 'O' ? <OIcon /> : null}
+      {value ? ICONS[value] : null}
     </button>
   );
 };

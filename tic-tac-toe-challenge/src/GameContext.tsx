@@ -1,45 +1,14 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
-
-interface IGameContext {
-  board: (string | null)[];
-  currentPlayer: string;
-  winner: string | null;
-  xWins: number;
-  oWins: number;
-  isGameOver: boolean;
-  setBoard: React.Dispatch<React.SetStateAction<(string | null)[]>>;
-  setCurrentPlayer: React.Dispatch<React.SetStateAction<string>>;
-  setWinner: React.Dispatch<React.SetStateAction<string | null>>;
-  setXWins: React.Dispatch<React.SetStateAction<number>>;
-  setOWins: React.Dispatch<React.SetStateAction<number>>;
-  setIsGameOver: React.Dispatch<React.SetStateAction<boolean>>;
-  resetGame: () => void;
-  ultimateWinner: string | null;
-  setUltimateWinner: React.Dispatch<React.SetStateAction<string | null>>;
-  winningCombination: number[] | null;
-  setWinningCombination: React.Dispatch<React.SetStateAction<number[] | null>>;
-  timeLeft: number;
-  setTimeLeft: React.Dispatch<React.SetStateAction<number>>;
-  hasStarted: boolean;
-  setHasStarted: React.Dispatch<React.SetStateAction<boolean>>;
-  totalPlayTime: number;
-  setTotalPlayTime: React.Dispatch<React.SetStateAction<number>>;
-  allGamesFinished: boolean;
-  setAllGamesFinished: React.Dispatch<React.SetStateAction<boolean>>;
-  incrementXWins: () => void;
-  incrementOWins: () => void;
-  initialState: GameState;
-  isDraw: boolean;
-  setIsDraw: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-interface GameState {
-  xWins: number;
-  oWins: number;
-  isDraw: boolean,
-}
+import React, { createContext, useState, useContext } from 'react';
+import { IGameContext, IGameProviderProps } from './types';
 
 const GameContext = createContext<IGameContext | undefined>(undefined);
+
+const initialState = {
+  xWins: 0,
+  oWins: 0,
+  totalGames: 0,
+  isDraw: false,
+};
 
 export const useGame = () => {
   const context = useContext(GameContext);
@@ -48,10 +17,6 @@ export const useGame = () => {
   }
   return context;
 };
-
-interface IGameProviderProps {
-  children: ReactNode;
-}
 
 export const GameProvider: React.FC<IGameProviderProps> = ({ children }) => {
   const [board, setBoard] = useState<(string | null)[]>(Array(9).fill(null));
@@ -66,13 +31,6 @@ export const GameProvider: React.FC<IGameProviderProps> = ({ children }) => {
   const [hasStarted, setHasStarted] = useState<boolean>(false);
   const [totalPlayTime, setTotalPlayTime] = useState<number>(0);
   const [allGamesFinished, setAllGamesFinished] = useState<boolean>(false);
-
-  const initialState = {
-    xWins: 0,
-    oWins: 0,
-    totalGames: 0,
-    isDraw: false,
-  };
 
   function incrementXWins() {
     setXWins(prevXWins => prevXWins + 1);

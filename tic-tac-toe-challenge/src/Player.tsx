@@ -1,10 +1,5 @@
 import React from 'react';
-
-interface PlayerProps {
-  wins: number;
-  label: string;
-  className?: string;
-}
+import { PlayerProps } from './types'
 
 const Player: React.FC<PlayerProps> = ({ wins, label, className }) => (
   <div className={`player ${className || ''}`}>
