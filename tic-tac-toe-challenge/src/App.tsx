@@ -1,13 +1,13 @@
 import React from 'react';
-import { GameProvider, useGame } from './GameContext';
-import Board from './Board';
-import GameModal from './GameModal';
-import './App.css';
-import Player from './Player';
-import { formatTime } from './utils'
-import StatsLeft from './StatsLeft';
-import StatsRight from './StatsRight';
-import GridSelector from './GridSelector';
+import { GameProvider, useGame } from './context/GameContext';
+import Board from './components/Board';
+import GameModal from './components/GameModal';
+import './styles/App.css';
+import Player from './components/Player';
+import { formatTime } from './utils/utils'
+import StatsLeft from './components/StatsLeft';
+import StatsRight from './components/StatsRight';
+import GridSelector from './components/GridSelector';
 
 export const GameLayout: React.FC = () => {
   const {

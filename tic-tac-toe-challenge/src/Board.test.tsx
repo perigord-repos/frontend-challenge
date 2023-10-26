@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Board from './Board';
+import Board from './components/Board';
 
 test('renders the board', () => {
   // const { getByTestId } = render(<Board />);

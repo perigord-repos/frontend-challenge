@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 import Square from './Square';
-import { useGame } from './GameContext';
-import { checkWinner } from './utils';
+import { useGame } from '../context/GameContext';
+import { checkWinner } from '../utils/utils';
 
 const Board: React.FC = () => {
   const {

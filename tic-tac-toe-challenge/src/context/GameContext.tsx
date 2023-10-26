@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
-import { IGameContext, IGameProviderProps } from './types';
+import { IGameContext, IGameProviderProps } from '../types';
 
 const GameContext = createContext<IGameContext | undefined>(undefined);
 

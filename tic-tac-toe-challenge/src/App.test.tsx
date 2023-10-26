@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 // import App, { GameLayout } from './App';
-import { GameProvider } from './GameContext';
+import { GameProvider } from './context/GameContext';
 
 // Mock child components to isolate GameLayout component
 jest.mock('./Board', () => () => <div data-testid="mock-board"></div>);

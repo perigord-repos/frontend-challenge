@@ -1,5 +1,5 @@
 import React from 'react';
-import { GamesHistoryProps } from './types'
+import { GamesHistoryProps } from '../types'
 
 const GamesHistory: React.FC<GamesHistoryProps> = ({ totalGames, xWins, oWins }) => {
   const gamesPlayed = xWins + oWins;

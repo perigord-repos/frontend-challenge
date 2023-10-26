@@ -1,20 +1,20 @@
-import React, { ChangeEvent } from "react";
-import { useGame } from "./GameContext";
+import React from "react";
+import { useGame } from "../context/GameContext";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function GridSelector() {
   const { setGridSize, resetGame } = useGame();
 
   const handleGridChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setGridSize(Number(e.target.value));  // Set grid size
-    resetGame();  // Reset the game after setting grid size
+    setGridSize(Number(e.target.value));  
+    resetGame();  
   };
 
   return (
     <div className="container mt-3">
       <div className="row">
-        <div className="col-md-5 offset-md-5"> {/* Center the column on medium screens and up */}
-          <div className="d-flex justify-content-center"> {/* Use flexbox to center the input group */}
+        <div className="col-md-5 offset-md-5"> 
+          <div className="d-flex justify-content-center"> 
             <div className="input-group">
               <div className="input-group-prepend">
                 <label className="input-group-text" htmlFor="gridSelector">Grid Size</label>
