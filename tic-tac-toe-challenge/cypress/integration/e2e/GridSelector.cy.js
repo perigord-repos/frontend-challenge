@@ -4,6 +4,10 @@ describe('GridSelector Component', () => {
     cy.visit('http://localhost:3000'); 
   });
 
+  it('should have the default grid size initially set', () => {
+    cy.get('#gridSelector').should('have.value', '3');
+  });
+  
   it('should render the GridSelector component', () => {
     cy.get('.container.mt-3').should('be.visible');
   });
@@ -18,4 +22,11 @@ describe('GridSelector Component', () => {
     cy.get('#gridSelector').select('9');
     cy.get('#gridSelector').should('have.value', '9');
   });
+
+  it('should have a label associated with the select element', () => {
+    cy.get('label[for="gridSelector"]').should('exist');
+  });
+  
+  
+  
 });
