@@ -1,9 +1,14 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import { useGame } from "./GameContext";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function GridSelector() {
-  const { setGridSize } = useGame();
+  const { setGridSize, resetGame } = useGame();
+
+  const handleGridChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setGridSize(Number(e.target.value));  // Set grid size
+    resetGame();  // Reset the game after setting grid size
+  };
 
   return (
     <div className="container mt-3">
@@ -17,7 +22,7 @@ function GridSelector() {
               <select 
                 className="custom-select" 
                 id="gridSelector" 
-                onChange={(e) => setGridSize(Number(e.target.value))}
+                onChange={handleGridChange}
               >
                 <option value="3">3x3</option>
                 <option value="6">6x6</option>
