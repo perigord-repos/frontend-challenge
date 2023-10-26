@@ -23,6 +23,7 @@ export const GameLayout: React.FC = () => {
       <div className="game-container container">
         <header className="text-center mb-4">
           <h1>TIC TAC TOE GAME</h1>
+          <GridSelector />
         </header>
         <div className="players-board-container d-flex flex-md-row">
           <Player label="PLAYER 1" wins={xWins} className="order-1"/>
@@ -57,7 +58,6 @@ export const GameLayout: React.FC = () => {
 const App: React.FC = () => {
   return (
     <GameProvider>
-      <GridSelector />
       <GameLayout />
     </GameProvider>
   );
