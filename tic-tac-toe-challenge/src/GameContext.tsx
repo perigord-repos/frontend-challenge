@@ -55,7 +55,6 @@ export const GameProvider: React.FC<IGameProviderProps> = ({ children }) => {
     setHasStarted(false);
     setTimeLeft(120);
     setIsDraw(false);
-
   };
 
   return (
