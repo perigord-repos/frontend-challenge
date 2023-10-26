@@ -1,7 +1,7 @@
 import React from 'react';
-import { useGame } from '../context/GameContext';
+import { useGame } from '../../context/GameContext';
 import { Modal, Button } from 'react-bootstrap';
-import {ModalContentProps} from '../types'
+import {ModalContentProps} from '../../types'
 
 const ModalContent: React.FC<ModalContentProps> = ({ title, message, buttonText, onButtonClick }) => (
   <>

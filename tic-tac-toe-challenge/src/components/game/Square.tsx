@@ -1,6 +1,6 @@
 import React from 'react';
-import { ReactComponent as XIcon } from '../assets/x.svg';
-import { ReactComponent as OIcon } from '../assets/o.svg';
+import { ReactComponent as XIcon } from '../../assets/images/x.svg';
+import { ReactComponent as OIcon } from '../../assets/images/o.svg';
 
 interface SquareProps {
   value: 'X' | 'O' | null;

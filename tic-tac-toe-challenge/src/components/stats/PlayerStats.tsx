@@ -1,5 +1,5 @@
 import React from 'react';
-import { PlayerStatsProps } from '../types'
+import { PlayerStatsProps } from '../../types'
 
 const PlayerStats: React.FC<PlayerStatsProps> = ({ playerId, wins, losses }) => {
   const totalGames = wins + losses;

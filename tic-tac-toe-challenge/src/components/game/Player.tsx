@@ -1,5 +1,5 @@
 import React from 'react';
-import { PlayerProps } from '../types'
+import { PlayerProps } from '../../types'
 
 const Player: React.FC<PlayerProps> = ({ wins, label, className }) => (
   <div className={`player ${className || ''}`}>
