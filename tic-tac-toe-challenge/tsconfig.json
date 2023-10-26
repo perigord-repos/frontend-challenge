@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    // "jsx": "react-jsx",
-    "types": ["node", "jest", "@testing-library/jest-dom"],
+    "baseUrl": "./",
+    "types": ["node", "jest"],
     "target": "es5",
     "lib": [
       "dom",
@@ -23,8 +23,7 @@
     "jsx": "react"
   },
   "include": [
-    "src",
-    "cypress/**/*.ts", // Include Cypress TypeScript files
-    "cypress.d.ts" // Include the custom Cypress type declarations
-, "src/App.cy.tsx"  ]
+    "cypress/**/*.ts",
+    "cypress/**/*.tsx"
+  ]
 }
