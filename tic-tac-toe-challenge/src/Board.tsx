@@ -71,7 +71,7 @@ const Board: React.FC = () => {
 
     const newBoard = board.slice();
     newBoard[index] = currentPlayer;
-    const [newWinner, winningCombo] = checkWinner(newBoard);
+    const [newWinner, winningCombo] = checkWinner(newBoard, gridSize);
 
     setBoard(newBoard);
     setWinner(newWinner);
