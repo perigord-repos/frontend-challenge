@@ -15,7 +15,7 @@ function GridSelector() {
       <div className="row">
         <div className="col-md-5 offset-md-5"> 
           <div className="d-flex justify-content-center"> 
-            <div className="input-group">
+            <div className="input-group ig-group">
               <div className="input-group-prepend">
                 <label className="input-group-text" htmlFor="gridSelector">Grid Size</label>
               </div>
