@@ -4,6 +4,7 @@ module.exports = {
         framework: "create-react-app",
         bundler: "webpack",
       },
+      specPattern: "cypress/integration/unit/**/*",
     },
     e2e: {
       specPattern: "cypress/integration/e2e/**/*",

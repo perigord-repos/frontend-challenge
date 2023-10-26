@@ -23,7 +23,8 @@
     "jsx": "react"
   },
   "include": [
-    "cypress/**/*.ts",
-    "cypress/**/*.tsx"
+    "src",
+    "cypress/**/*.ts", // Include Cypress TypeScript files
+    "cypress.d.ts" // Include the custom Cypress type declarations
   ]
 }
