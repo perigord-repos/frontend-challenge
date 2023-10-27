@@ -2,15 +2,7 @@
 describe('Games History component', () => {
 
   beforeEach(() => {
-    const mockData = {
-      totalGames: 3,
-      xWins: 2,
-      oWins: 1
-    };
-    cy.visit('http://localhost:3000', { 
-      onBeforeLoad: (win) => {
-        win.__DATA__ = mockData;
-      } 
+      cy.visit('http://localhost:3000', { 
     });
   });
 
@@ -20,8 +12,17 @@ describe('Games History component', () => {
 
   it('should display correctly on mobile', () => {
     cy.viewport('iphone-6');
-    // Add assertions for mobile layout
+    cy.get('.games-history .square').each(($square) => {
+      // eslint-disable-next-line no-unused-expressions
+      expect($square).to.be.visible;
+    });
   });
-  
 
+  it('should display correctly on tablet', () => {
+    cy.viewport('ipad-2');
+    cy.get('.games-history .square').each(($square) => {
+      // eslint-disable-next-line no-unused-expressions
+      expect($square).to.be.visible;
+    });
+  });
 })

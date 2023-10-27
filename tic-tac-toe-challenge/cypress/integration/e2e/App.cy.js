@@ -3,12 +3,16 @@
 describe('Tic Tac Toe App', () => {
 
     beforeEach(() => {
-      // Visiting the app before each test
       cy.visit('http://localhost:3000/');
     });
   
     it('renders the game header', () => {
       cy.get('header h1').should('contain', 'TIC TAC TOE GAME');
+    });
+
+    it('renders the GridSelector component within the header', () => {
+      cy.get('.ig-group').should('be.visible');
+      cy.get('.ig-group').should('have.length', 1);    
     });
   
     it('renders the game board', () => {
@@ -28,6 +32,19 @@ describe('Tic Tac Toe App', () => {
       cy.get('.game-timer').should('be.visible');
       cy.get('.stats-container').should('be.visible');
       cy.get('.right-content').should('be.visible');
+    });
+
+    it('displays the game time left and current player', () => {
+      cy.get('.game-timer h2').eq(0).should('contain', 'Game time left:'); 
+      cy.get('.game-timer h2').eq(1).should('contain', 'Current Player:');
+    });
+
+    it('renders the Stats component', () => {
+      cy.get('.stats-and-right-container').should('be.visible');
+    });
+
+    it('displays the total play time', () => {
+      cy.get('.total-time').should('contain', 'Total Play Time:'); 
     });
 
   });

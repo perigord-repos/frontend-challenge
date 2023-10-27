@@ -20,7 +20,7 @@ export const GameLayout: React.FC = () => {
   return (
     <div className="app">
       <div className="game-container container">
-        <header className="text-center mb-4">
+        <header className="grid-selector text-center mb-4">
           <h1>TIC TAC TOE GAME</h1>
           <GridSelector />
         </header>
@@ -38,7 +38,7 @@ export const GameLayout: React.FC = () => {
           <h2>Current Player: {currentPlayer}</h2>
         </div>
         <Stats />
-        <h2 className="mt-4">Total Play Time: {formatTime(totalPlayTime)}</h2>
+        <h2 className="total-time mt-4">Total Play Time: {formatTime(totalPlayTime)}</h2>
       </div>
       <GameModal />
     </div>
