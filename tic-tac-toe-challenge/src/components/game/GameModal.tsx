@@ -3,21 +3,22 @@ import { useGame } from '../../context/GameContext';
 import { Modal, Button } from 'react-bootstrap';
 import {ModalContentProps} from '../../types'
 
-const ModalContent: React.FC<ModalContentProps> = ({ title, message, buttonText, onButtonClick }) => (
+const ModalContent: React.FC<ModalContentProps> = ({ title, message, buttonText, onButtonClick, customStyle }) => (
   <>
-    <Modal.Header closeButton>
+    <Modal.Header closeButton style={customStyle}>
       <Modal.Title>{title}</Modal.Title>
     </Modal.Header>
-    <Modal.Body>
+    <Modal.Body style={customStyle}>
       <h2>{message}</h2>
     </Modal.Body>
-    <Modal.Footer>
+    <Modal.Footer style={customStyle}>
       <Button variant="primary" onClick={onButtonClick}>
         {buttonText}
       </Button>
     </Modal.Footer>
   </>
 );
+
 
 const GameModal: React.FC = () => {
   const { winner, resetGame, ultimateWinner, timeLeft } = useGame();
@@ -31,6 +32,10 @@ const GameModal: React.FC = () => {
         message: `${ultimateWinner} is the ultimate champion with 5 wins!`,
         buttonText: 'Restart Championship',
         onButtonClick: resetGame,
+        customStyle: {
+          backgroundColor: '#e7f9f5', 
+          color: '#1cb746',
+        }
       };
     }
     if (winner) {

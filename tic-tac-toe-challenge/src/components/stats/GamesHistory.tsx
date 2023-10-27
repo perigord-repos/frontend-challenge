@@ -15,7 +15,7 @@ const GamesHistory: React.FC<GamesHistoryProps> = ({ totalGames, xWins, oWins })
           else if (idx < gamesPlayed)
             content = "P2";
           return (
-            <div key={idx} className="square">
+            <div key={idx} className="square rounded">
               {content}
             </div>
           );

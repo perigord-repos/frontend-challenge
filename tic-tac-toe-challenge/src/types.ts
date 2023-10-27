@@ -28,6 +28,7 @@ export interface ModalContentProps {
     message: string;
     buttonText: string;
     onButtonClick: () => void;
+    customStyle?: React.CSSProperties; 
 }
 
 export interface IGameContext {

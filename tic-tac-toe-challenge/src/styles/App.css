@@ -176,3 +176,21 @@ header {
     width: initial !important;  
   }
 }
+
+.board {
+  background: linear-gradient(to right, #f2f4f6, #dfe3e6);
+  transition: all 0.3s ease-in-out;
+}
+
+.square:hover {
+  transform: scale(1.2);
+}
+
+.player-section {
+  background-color: #e1f5fe;
+}
+
+.player-section.player2 {
+  background-color: #0288d1; 
+  color: white;
+}

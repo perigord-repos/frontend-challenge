@@ -24,14 +24,14 @@ export const GameLayout: React.FC = () => {
           <h1>TIC TAC TOE GAME</h1>
           <GridSelector />
         </header>
-        <div className="players-board-container d-flex flex-md-row">
-          <Player label="PLAYER 1" wins={xWins} className="order-1"/>
+        <div className="players-board-container d-flex flex-md-row shadow-sm">
+          <Player label="PLAYER 1" wins={xWins} className="order-1 card"/>
           <div className="game-board order-0 order-md-1">
             <Board />
           </div>
-          <Player label="PLAYER 2" wins={oWins} className="order-2"/>
+          <Player label="PLAYER 2" wins={oWins} className="order-2 card"/>
         </div>
-        <div className='game-timer mb-4'>
+        <div className='game-timer mb-4 alert alert-primary mb-3 '>
           <h2>
             Game time left: {formatTime(timeLeft)}
           </h2>

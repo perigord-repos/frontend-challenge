@@ -29,7 +29,7 @@ const Square: React.FC<SquareProps> = ({ value, onClick, isWinningSquare }) => {
   return (
     <button 
       data-testid="square"
-      className={`square ${isWinningSquare ? 'winning-square' : ''}`} 
+      className={`square rounded shadow ${isWinningSquare ? 'winning-square' : ''}`} 
       onClick={onClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
