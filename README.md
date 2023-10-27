@@ -36,3 +36,7 @@ ___
 
 ## Bonus features - Testing
 - Implement a full set of unit tests to assert the game's correct behaviour;
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/main
