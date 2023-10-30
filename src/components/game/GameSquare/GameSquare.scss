@@ -1,0 +1,39 @@
+@use 'src/styles/colors';
+
+.rk-game-square {
+
+    width: 100%;
+    border: 1px solid rgb(180, 180, 180);
+
+    &:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+
+    .rk-game-square-content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(231, 231, 231);
+
+        &.rk-highlight {
+            background-color: colors.$rk-square-highlight;
+        }
+
+        &.player-o {
+            background-image: url('./../../../../public/circle.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 60%;
+        }
+        &.player-x {
+            background-image: url('./../../../../public/times.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 60%;
+        }
+    }
+}

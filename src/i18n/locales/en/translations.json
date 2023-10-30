@@ -1,0 +1,22 @@
+{
+    "app.title": "Tic Tac Toe",
+
+    "player.o": "Player O",
+    "player.x": "Player X",
+
+    "your.turn": "Your Turn!",
+    "you.won": "Congratulations. You won the game!",
+
+    "button.start.9": "Start 3x3 Game",
+    "button.start.36": "Start 6x6 Game",
+    "button.start.81": "Start 9x9 Game",
+    "button.restart": "Restart Match",
+
+    "game.time.total": "Total Game Time",
+    "game.time.current": "Current Game Time",
+
+    "game.history": "Game History",
+    "game.percentage": "% Wins",
+
+    "game.overall.success": "Congratulations Player {{player}}. You have won 5 games. You have won the match!"
+}

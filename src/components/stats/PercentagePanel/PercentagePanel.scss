@@ -1,0 +1,19 @@
+.rk-percentage-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .rk-percentage-bar {
+        width: 80%;
+        height: 40px;
+        border: 1px solid lightblue;
+        border-radius: 20px;
+    }
+
+    .rk-percentage-labels {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+}
