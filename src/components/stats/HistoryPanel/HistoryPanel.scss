@@ -1,0 +1,35 @@
+@use 'src/styles/colors';
+
+.rk-history-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .rk-history-items {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+
+        .rk-history-item {
+
+            &.player-o {
+                color: colors.$rk-player-o;
+                border-color: colors.$rk-player-o;
+            }
+
+            &.player-x {
+                color: colors.$rk-player-x;
+                border-color: colors.$rk-player-x;
+            }
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid lightgray;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.rk-game-board {
+    display: grid;
+
+    &.board-9 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.board-36 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    &.board-81 {
+        grid-template-columns: repeat(9, 1fr);
+    }
+}

@@ -1,0 +1,22 @@
+@use 'src/styles/colors';
+
+.rk-player-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+
+    &.player-o {
+        color: colors.$rk-player-o;
+    }
+
+    &.player-x {
+        color: colors.$rk-player-x;
+    }
+
+    .rk-player-won {
+        color: orange;
+    }
+}
